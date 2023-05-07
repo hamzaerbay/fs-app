@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <H1>Websocket example</H1>
+    <img src="https://media.giphy.com/media/AcfTF7tyikWyroP0x7/giphy.gif" />
+    <script>
+      let ws;
+      // create protocol
+      // websocket differ connection over http or https
+      // we're working with both
+      const proto = window.location.protocol === 'https:' ? 'wss' : 'ws';
+      // send domain name into websocket
+      ws = new WebSocket(`${proto}://${window.location.host}`)
+      //
+      ws.onmessage = (event) => {console.log(event.data)}
+    </script>
+  </body>
+</html>
