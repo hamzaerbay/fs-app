@@ -25,7 +25,6 @@ process.on("SIGINT", () => {
     shutdownDB();
   });
 });
-
 /** Begin websocket */
 // we're going to use ws
 const WebSocketServer = require("ws").Server;
